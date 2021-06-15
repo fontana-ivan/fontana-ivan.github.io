@@ -1,28 +1,29 @@
 #menu{
     text-align: center;
-
+    background-color: var(--gray-color);
 }
-#menu-izq{
+#menu-izq h1{
     color: var(--primary-color);
 }
 
 #menu-der ul li a{
     display: block;
+    margin: 20px;
     text-decoration: none;
     color: var(--primary-color);
-    transition: 0.3s;   
+    transition: all 0.3s;
 }
 
 #menu-der ul li a:hover{
     color: var(--primary-color-dark);
-    text-decoration: underline;
 }
 
 #menu-der ul li a.active{
     color: var(--primary-color-dark);
 }
 
-@media only screen and (min-width: 768px){ /*en pantallas de 768px de ancho o más*/
+/*en pantallas de 768px de ancho o más*/
+@media only screen and (min-width: 768px){
  
     #menu-der ul{
         display: flex;
@@ -30,5 +31,31 @@
     
     #menu-der ul li{
         margin: auto;
+    }
+}
+
+/*en pantallas de 992px de ancho o más*/
+@media only screen and (min-width: 992px){
+
+    #menu{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    #menu-izq h1{
+        margin: 20px;
+        text-align: left;
+    }   
+    
+    #menu-der ul li a{
+        padding-top: 5px;
+    }
+
+    #menu-der ul li a:hover, #menu-der ul li a.active{
+        color: var(--primary-color-dark);
+        border-bottom: 1px solid;
     }
 }
